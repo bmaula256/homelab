@@ -1,6 +1,6 @@
 resource "proxmox_vm_qemu" "vm-instance" {
 
-    count = 1
+    count = 0
     name                = "vm-instance-${count.index + 1}"
     target_node         = "pve"
     clone               = "bastion-alpine"
