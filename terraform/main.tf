@@ -1,3 +1,5 @@
+#This is one of my first dives into Terraform.
+#This will likely be moved into an archives folder later since it doesn't see much use.
 resource "proxmox_vm_qemu" "vm-instance" {
 
     count = 0

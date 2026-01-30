@@ -1,4 +1,5 @@
 #This file assumes an open-sourced fork for terraform called OpenTofu, which supports state file encryption is used.
+#This is where I do my provider config.
 terraform {
 	encryption {
 		key_provider "pbkdf2" "getBitWarden" {
@@ -33,29 +34,8 @@ terraform {
     }
 }
 
-
-
-# This passphrase is passed in by another program as an environment variable.
-variable "state_encryption_passphrase" {
-	type = string
-	sensitive = true
-}
-
-variable "proxmox_api_url" {
-	type = string
-}
-
-variable "proxmox_api_token_id" {
-	type = string
-	sensitive = true
-}
-
 provider "bitwarden" {
 	vault_path = ""	
-}
-
-data "bitwarden_item_login" "proxmox_api_secret" {
-	id = "8e937c3b-d159-4492-993b-b3d300376db0"
 }
 
 provider "proxmox" {
