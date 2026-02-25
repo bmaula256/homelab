@@ -32,3 +32,6 @@ This VLAN contains all/most of the endpoints that do not require direct access t
 
 ## Current mission
 Right now my goal is to focus on automation and splunk. I properly configured my own domain, locked things down with VLANs, tailscale, and cloudflare access. I've done quite a bit with network fundamentals and linux config. Now I am building knowledge with and setting my sights on Ansible, Terraform, and Splunk. I will likely continue to revist docker throughout my journey as well since that is on my radar.
+
+#### Update Feb-25-2026
+After testing Terraform in my current setup, I developed some .tf file templates and put my knowledge to use in a production environment for CDRU. CDRU is a student led non-profit organization focused on defensive cyber security workshops. Terraform is especially useful here because we often provision large amounts of VMs at once for our workshops.
